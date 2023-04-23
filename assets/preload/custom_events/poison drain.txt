@@ -1,0 +1,4 @@
+Insert anywhere to immediately begin draining health.
+This will drain your health constantly during a section
+        HITTING ZERO HEALTH WILL KILL
+set value 1 "false" to turn off and leave it empty to turn on

@@ -1,0 +1,5 @@
+Change the zoom of the camera lol/Cambia el Zoom LEL
+
+Value 1: The Zoom amount that you want/El Zoom que quieras
+
+Value 2: The time you want the zoom to happen/El tiempo que quieres que dure el zoom

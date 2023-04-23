@@ -1,0 +1,4 @@
+Set the time on the clock to be a diffrent length
+(requires script to work)
+value 1:minutes
+value 2:seconds

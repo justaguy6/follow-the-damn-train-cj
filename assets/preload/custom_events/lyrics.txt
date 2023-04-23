@@ -1,0 +1,7 @@
+Make Lyrics Appear on screen
+
+COLOR MUST BE IN HEX VALUE
+Color Example: 69fff0
+Value 1: lyrics go here
+Value 2: Color (Default is White)
+leave value 1 empty to remove lyrics
