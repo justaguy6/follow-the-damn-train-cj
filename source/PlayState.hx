@@ -868,63 +868,48 @@ class PlayState extends MusicBeatState
 		add(luaDebugGroup);
 		#end
 
+		// "GLOBAL" SCRIPTS
 		#if LUA_ALLOWED
-		var doPush:Bool = false;
-
-		if(openfl.utils.Assets.exists("assets/scripts/" + "script.lua"))
-		{
-			var path = Paths.luaAsset("scripts/" + "script");
-			var luaFile = openfl.Assets.getBytes(path);
-
-			FileSystem.createDirectory(Main.path + "assets/scripts");
-			FileSystem.createDirectory(Main.path + "assets/scripts/");
-			
-			File.saveBytes(Paths.lua("scripts/" + "script"), luaFile);
-			doPush = true;
+		var doPush:Bool = false; 
+		if (OpenFlAssets.exists('assets/scripts/script.lua')) {
+		  doPush = true;
 		}
+		
 		if(doPush)
-			luaArray.push(new FunkinLua(Paths.lua("scripts/" + "script")));
+		luaArray.push(new FunkinLua(Asset2File.getPath('assets/scripts/script.lua')));
 		#end
-			
-			// apenas copie esse código para múltiplos scripts || just copy this code to multiple scripts 
-			
-			
-			LUA_ALLOWED
-		var doPush:Bool = false;
-
-		if(openfl.utils.Assets.exists("assets/scripts/" + "script1.lua"))
-		{
-			var path = Paths.luaAsset("scripts/" + "script1");
-			var luaFile = openfl.Assets.getBytes(path);
-
-			FileSystem.createDirectory(Main.path + "assets/scripts");
-			FileSystem.createDirectory(Main.path + "assets/scripts/");
-			
-			File.saveBytes(Paths.lua("scripts/" + "script1"), luaFile);
-			doPush = true;
+		
+		#if LUA_ALLOWED
+		var doPush:Bool = false; 
+		if (OpenFlAssets.exists('assets/scripts/script1.lua')) {
+		  doPush = true;
 		}
+		
 		if(doPush)
-			luaArray.push(new FunkinLua(Paths.lua("scripts/" + "script1")));
+		luaArray.push(new FunkinLua(Asset2File.getPath('assets/scripts/script1.lua'))); // It doesn't have to be "script1", "script2", you can put whatever name you want. 
 		#end
-			
-			
-			LUA_ALLOWED
-		var doPush:Bool = false;
 
-		if(openfl.utils.Assets.exists("assets/scripts/" + "script3.lua"))
-		{
-			var path = Paths.luaAsset("scripts/" + "script3");
-			var luaFile = openfl.Assets.getBytes(path);
-
-			FileSystem.createDirectory(Main.path + "assets/scripts");
-			FileSystem.createDirectory(Main.path + "assets/scripts/");
-			
-			File.saveBytes(Paths.lua("scripts/" + "script3"), luaFile);
-			doPush = true;
+			// "GLOBAL" SCRIPTS
+		#if LUA_ALLOWED
+		var doPush:Bool = false; 
+		if (OpenFlAssets.exists('assets/scripts/script2.lua')) {
+		  doPush = true;
 		}
+		
 		if(doPush)
-			luaArray.push(new FunkinLua(Paths.lua("scripts/" + "script3")));
+		luaArray.push(new FunkinLua(Asset2File.getPath('assets/scripts/script2.lua')));
 		#end
+		
+		#if LUA_ALLOWED
+		var doPush:Bool = false; 
+		if (OpenFlAssets.exists('assets/scripts/script3.lua')) {
+		  doPush = true;
+		}
+		
+		if(doPush)
+		luaArray.push(new FunkinLua(Asset2File.getPath('assets/scripts/script3.lua'))); // It doesn't have to be "script1", "script2", you can put whatever name you want. 
+		#end
+
 		// STAGE SCRIPTS
 		#if (MODS_ALLOWED && LUA_ALLOWED)
 		startLuasOnFolder('stages/' + curStage + '.lua');
